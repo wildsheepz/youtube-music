@@ -11,9 +11,9 @@ module.exports = () => {
 		}
 
 		// Check if disabled
-		if (!tabs.lyrics?.hasAttribute("disabled")) {
-			return;
-		}
+		// if (!tabs.lyrics?.hasAttribute("disabled")) {
+		// 	return;
+		// }
 
 		let hasLyrics = true;
 
@@ -31,7 +31,7 @@ module.exports = () => {
 		}
 
 		if (is.dev()) {
-			console.log("Fetched lyrics from Genius");
+			console.log("Fetched lyrics from Genius Plugin");
 		}
 
 		enableLyricsTab();
@@ -73,7 +73,7 @@ module.exports = () => {
 				</div>
 				<yt-formatted-string class="footer style-scope ytmusic-description-shelf-renderer" style="align-self: baseline"></yt-formatted-string>`;
 			if (hasLyrics) {
-				lyricsContainer.querySelector('.footer').textContent = 'Source: Genius';
+				lyricsContainer.querySelector('.footer').textContent = 'Source: Genius/KKbox';
 				enableLyricsTab();
 			}
 		}
